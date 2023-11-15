@@ -4,8 +4,6 @@ from selenium.webdriver.common.by import By
 import time
 import random
 from decouple import config
-import os
-import json
 
 QUANTIDADE_COMENTARIOS = config('QUANTIDADE_COMENTARIOS')
 USERNAME_INSTAGRAM = config('USERNAME_INSTAGRAM')
@@ -55,7 +53,7 @@ class InstagramBot:
         comment_times = QUANTIDADE_COMENTARIOS
 
         for i in range(0, int(comment_times)):
-            persons = json.loads(os.environ['LIST_PERSONS'])
+            persons = ["@habby_valle15", "Habby", "Bibi", "Leo"]
 
             first_person = random.choice(persons)
             persons.pop(persons.index(first_person))
