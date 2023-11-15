@@ -19,7 +19,8 @@ class InstagramBot:
         firefoxProfile = webdriver.FirefoxProfile()
         firefoxProfile.set_preference("intl.accept_languages", "pt,pt-BR")
         firefoxProfile.set_preference("dom.webnotifications.enabled", False)
-        self.driver = webdriver.Firefox(firefox_profile=firefoxProfile, executable_path=r"./geckodriver")
+        # coloque o caminho do seu geckodriver no seu computador
+        self.driver = webdriver.Firefox(firefox_profile=firefoxProfile, executable_path=r"{C:\Users\Habby\Desktop\}geckodriver-v0.33.0-win64\geckodriver.exe")
 
 
     @staticmethod
